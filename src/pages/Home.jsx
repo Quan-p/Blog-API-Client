@@ -7,8 +7,10 @@ export default function Home() {
         const fetchPosts = async () => {
             try {
                 const req = await fetch('https://blog-api-ifcw.onrender.com/posts');
+                if (req.status !== 200) {}
                 const reqJson = await req.json();
                 setPosts(reqJson.posts);
+
             } catch (err) {
                 console.log(err);
             }
@@ -17,12 +19,11 @@ export default function Home() {
     }, []); 
     return (
         <div className="home-container">
-            <div>
-                Quan's Blog
+            {posts ?
                 <div>
                     {posts[1].title}: {posts[1].content}
                 </div>
-            </div>
+            : <div>Nothing is loaded</div>}
         </div>
     );
 }
