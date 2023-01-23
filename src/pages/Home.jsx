@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function Home() {
+const Home = () => {
     const [posts, setPosts] = useState();
     const [recentPosts, setRecentPosts] = useState();
     useEffect(() => {
@@ -35,4 +35,4 @@ export default function Home() {
     );
 }
 
-
+export default Home;
