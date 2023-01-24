@@ -9,6 +9,11 @@
   top: 0;
 }
 
+.footer-container {
+  bottom: 0;
+  position: absolute;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
