@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Hero from "../components/hero/Hero";
 
 const Home = () => {
     const [posts, setPosts] = useState();
@@ -19,6 +20,7 @@ const Home = () => {
     }, []); 
     return (
         <div className="home-container">
+            <Hero />
             {posts && recentPosts ?
                 <div className="post-container">
                     <h3>Recent Posts</h3>
