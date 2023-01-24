@@ -1,27 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Hero from "../components/hero/Hero";
 
-const Home = () => {
-    const [posts, setPosts] = useState();
+const Home = (props) => {
+    const posts = props.posts;
     const [recentPosts, setRecentPosts] = useState();
+
     useEffect(() => {
-        const fetchPosts = async () => {
-            try {
-                const req = await fetch('https://blog-api-ifcw.onrender.com/posts');
-                const reqJson = await req.json();
-                setPosts(reqJson.posts);
-                const sortPosts = reqJson.posts.sort((a, b) =>  new Date(b.date) - new Date(a.date));
-                setRecentPosts(sortPosts.slice(0, 3));
-            } catch (err) {
-                console.log(err);
-            }
+        if(posts) {
+            const sortPosts = posts.sort((a, b) =>  new Date(b.date) - new Date(a.date));
+            setRecentPosts(sortPosts.slice(0, 3));
         }
-        fetchPosts();
-    }, []); 
+    }, [posts]);
+
     return (
         <div className="home-container">
             <Hero />
-            {posts && recentPosts ?
+            {recentPosts ?
                 <div className="post-container">
                     <h3>Recent Posts</h3>
                     <ul>
