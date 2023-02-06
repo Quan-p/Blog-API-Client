@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Hero from "../components/hero/Hero";
+import PostCard from "../components/post_card/PostCard";
 
 const Home = (props) => {
     const posts = props.posts;
@@ -20,7 +21,7 @@ const Home = (props) => {
                     <h3>Recent Posts</h3>
                     <ul>
                         {recentPosts.map(post => {
-                            return <li key={post._id}>{post.title}</li>
+                            return <PostCard key={post._id} post={post}/>
                         })}
                     </ul>
                     
