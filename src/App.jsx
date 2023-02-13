@@ -8,25 +8,30 @@ import './App.scss';
 
 function App() {
   const [posts, setPosts] = useState();
+  const [users, setUsers] = useState();
 
   useEffect(() => {
-      const fetchPosts = async () => {
+      const fetchData = async () => {
           try {
-              const req = await fetch('https://blog-api-ifcw.onrender.com/posts');
-              const reqJson = await req.json();
-              setPosts(reqJson.posts);
+              const postReq = await fetch('https://blog-api-ifcw.onrender.com/posts');
+              const postsJson = await postReq.json();
+              setPosts(postsJson.posts);
+
+              const userReq = await fetch('https://blog-api-ifcw.onrender.com/users');
+              const userJson = await userReq.json();
+              setUsers(userJson.users);
           } catch (err) {
               console.log(err);
           }
       }
-      fetchPosts();
+      fetchData();
   }, []); 
   
   return (
     <div className="App">
       <Nav />
       <Routes>
-        <Route path='/' element={ <Home posts={posts} /> } />
+        <Route path='/' element={ <Home posts={posts} users={users}/> } />
         <Route path='posts' element={ <Post posts={posts} /> } />
       </Routes>
       <Footer />
