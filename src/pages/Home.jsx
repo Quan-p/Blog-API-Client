@@ -17,12 +17,12 @@ const Home = (props) => {
     return (
         <div className="home-container">
             <Hero />
-            {recentPosts ?
+            {recentPosts && users ?
                 <div className="post-container">
                     <h3>Recent Posts</h3>
                     <ul>
                         {recentPosts.map(post => {
-                            return <PostCard key={post._id} post={post}/>
+                            return <PostCard key={post._id} post={post} users={users} />
                         })}
                     </ul>
                     
