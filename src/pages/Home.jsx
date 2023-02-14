@@ -29,18 +29,6 @@ const Home = (props) => {
                 </div> 
                 : <div>Nothing is loaded</div>
             }
-            {users ?
-                <div className="user-container">
-                    <h3>Users</h3>
-                    <ul>
-                        {users.map(user => {
-                            return <li key={user._id}>{user.username}</li>
-                        })}
-                    </ul>
-                    
-                </div> 
-                : <div>No users loaded</div>
-            }
         </div>
     );
 }
