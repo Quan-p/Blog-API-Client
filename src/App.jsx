@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Post from './pages/Post';
 import Footer from './components/footer/Footer';
 import './App.scss';
+import PostDetails from "./components/post_details/PostDetails";
 
 function App() {
   const [posts, setPosts] = useState();
@@ -33,6 +34,7 @@ function App() {
       <Routes>
         <Route path='/' element={ <Home posts={posts} users={users}/> } />
         <Route path='posts' element={ <Post posts={posts} /> } />
+        <Route path='/posts/:postid' element={ <PostDetails posts={posts} /> } />
       </Routes>
       <Footer />
     </div>
