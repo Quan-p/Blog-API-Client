@@ -3,8 +3,15 @@ import React, { useEffect, useState } from "react";
 function PostCard({ post, users }) {
     const title = post.title;
     const date = post.date;
-    let author = users.find(user => user._id == post.author);
 
+    const authorId = post.author;
+    let author = users.find(user => user._id == authorId);
+
+    if (!author) {
+        console.error(`Author with id "${authorId}" not found`);
+        return null;
+    }
+    console.log(author.username)
     return (
         <a href={`/posts/${post._id}`} key={post._id}>
             <div>
