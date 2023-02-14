@@ -28,13 +28,18 @@ function App() {
       fetchData();
   }, []); 
   
+  const handleGetAuthorUsername = (authorId) => {
+    const author = users.find(user => user._id == authorId);
+    return author ? author.username : null;
+  }
+
   return (
     <div className="App">
       <Nav />
       <Routes>
         <Route path='/' element={ <Home posts={posts} users={users}/> } />
         <Route path='posts' element={ <Post posts={posts} /> } />
-        <Route path='/posts/:postid' element={ <PostDetails posts={posts} /> } />
+        <Route path='/posts/:postid' element={ <PostDetails posts={posts} users={users} handleGetAuthorUsername={handleGetAuthorUsername} /> } />
       </Routes>
       <Footer />
     </div>
