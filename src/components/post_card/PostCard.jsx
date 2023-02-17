@@ -13,13 +13,14 @@ function PostCard({ post, users }) {
     }
     console.log(author.username)
     return (
-        <a href={`/posts/${post._id}`} key={post._id}>
-            <div>
-                <h1>{author.username}</h1>
-                <h2>{title}</h2>
-                <p>{date}</p>
-            </div>
-        </a>
+        
+        <div>
+            <h1>{author.username}</h1>
+            <h2>{title}</h2>
+            <p>{date}</p>
+            <a href={`/posts/${post._id}`} key={post._id}>View Post</a>
+        </div>
+        
     )
 }
 
