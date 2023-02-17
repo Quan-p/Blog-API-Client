@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function PostCard({ post, users }) {
     const title = post.title;
-    const date = post.date;
+    const date = new Date(post.date).toLocaleDateString();
 
     const authorId = post.author;
     let author = users.find(user => user._id == authorId);
@@ -11,9 +11,9 @@ function PostCard({ post, users }) {
         console.error(`Author with id "${authorId}" not found`);
         return null;
     }
-    console.log(author.username)
+
     return (
-        
+    
         <div>
             <h1>{author.username}</h1>
             <h2>{title}</h2>

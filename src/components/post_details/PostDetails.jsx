@@ -19,6 +19,8 @@ const PostDetails = (props) => {
         return <div>Post not found</div>;
     }
 
+    let date = new Date(postObj.date).toLocaleString();
+
     return (
         <div>
             This is the post details page
@@ -27,7 +29,7 @@ const PostDetails = (props) => {
                     <div>{postObj.title}</div>
                     <div>{authorUsername}</div>
                     <div>{postObj.content}</div>
-                    <div>{postObj.date}</div>
+                    <div>{date}</div>
                 </div>
             ): <div>Loading...</div>}
         </div>
