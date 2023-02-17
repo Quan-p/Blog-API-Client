@@ -26,6 +26,8 @@ const PostDetails = (props) => {
                 <div>
                     <div>{postObj.title}</div>
                     <div>{authorUsername}</div>
+                    <div>{postObj.content}</div>
+                    <div>{postObj.date}</div>
                 </div>
             ): <div>Loading...</div>}
         </div>
