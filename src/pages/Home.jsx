@@ -2,12 +2,21 @@ import React, { useEffect, useState } from "react";
 import Hero from "../components/hero/Hero";
 import PostCard from "../components/post_card/PostCard";
 import { ClimbingBoxLoader } from "react-spinners";
+import './home.scss';
 
 const Home = (props) => {
     const posts = props.posts;
     const users = props.users;
     const [recentPosts, setRecentPosts] = useState();
     let boolean = true;
+
+    const override = {
+        position: 'static',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
+
     useEffect(() => {
         if(posts) {
             const sortPosts = posts.sort((a, b) =>  new Date(b.date) - new Date(a.date));
@@ -28,7 +37,11 @@ const Home = (props) => {
                     </ul>
                     
                 </div> 
-                : <ClimbingBoxLoader />
+                : <ClimbingBoxLoader
+                    color="#36d7b7"
+                    size={25}
+                    cssOverride={ override }
+                />
             }
         </div>
     );
