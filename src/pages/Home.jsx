@@ -8,7 +8,6 @@ const Home = (props) => {
     const posts = props.posts;
     const users = props.users;
     const [recentPosts, setRecentPosts] = useState();
-    let boolean = true;
 
     const override = {
         position: 'static',
@@ -27,7 +26,7 @@ const Home = (props) => {
     return (
         <div className="home-container">
             <Hero />
-            {recentPosts && users && !boolean ?
+            {recentPosts && users ?
                 <div className="post-container">
                     <h3>Recent Posts</h3>
                     <ul>
