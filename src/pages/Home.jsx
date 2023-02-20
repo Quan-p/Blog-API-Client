@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Hero from "../components/hero/Hero";
 import PostCard from "../components/post_card/PostCard";
+import { ClimbingBoxLoader } from "react-spinners";
 
 const Home = (props) => {
     const posts = props.posts;
     const users = props.users;
     const [recentPosts, setRecentPosts] = useState();
-
+    let boolean = true;
     useEffect(() => {
         if(posts) {
             const sortPosts = posts.sort((a, b) =>  new Date(b.date) - new Date(a.date));
@@ -17,7 +18,7 @@ const Home = (props) => {
     return (
         <div className="home-container">
             <Hero />
-            {recentPosts && users ?
+            {recentPosts && users && !boolean ?
                 <div className="post-container">
                     <h3>Recent Posts</h3>
                     <ul>
@@ -27,7 +28,7 @@ const Home = (props) => {
                     </ul>
                     
                 </div> 
-                : <div>Nothing is loaded</div>
+                : <ClimbingBoxLoader />
             }
         </div>
     );
