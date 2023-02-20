@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { ClimbingBoxLoader } from "react-spinners";
 
 const Post = (props) => {
     const posts = props.posts;
     const [sortedPosts, setSortedPosts] = useState();
+
+    const override = {
+        position: 'static',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
 
     useEffect(() => {
         if(posts) {
@@ -20,7 +28,11 @@ const Post = (props) => {
                     return <li key={post._id}>{post.title}</li>
                 })}
                 </ul>
-                : <div>Nothing is loaded</div>
+                : <ClimbingBoxLoader
+                color="#36d7b7"
+                size={25}
+                cssOverride={ override }
+            />
             }
         </div>
     );
