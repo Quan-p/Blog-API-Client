@@ -6,10 +6,27 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    
-    .left-container {
-        margin-right: auto;
+    font-size: 1.5rem;
+
+    a {
+        font-weight: 500;
+        color: #646cff;
+        text-decoration: inherit;
+    }
+    a:hover {
+        color: #535bf2;
     }
 
-    
+    .left-container {
+        margin-right: auto;
+        padding-left: 30px;
+    }
+
+    .right-container {
+        padding-right: 30px;
+        a {
+            padding-left: 30px;
+        }
+
+    }
 }
