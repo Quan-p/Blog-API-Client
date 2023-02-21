@@ -1,5 +1,15 @@
 .nav-container {
     width: 100%;
     min-width: 100vw;
+    height: 70px;
     background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    .left-container {
+        margin-right: auto;
+    }
+
+    
 }

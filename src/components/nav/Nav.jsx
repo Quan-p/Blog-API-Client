@@ -5,9 +5,14 @@ import './Nav.scss';
 const Nav = () => {
     return (
         <div className="nav-container">
-            This is a navbar
-            <Link to='/'>Home</Link>
-            <Link to='posts'>Posts</Link>
+            <div className="left-container">
+                This is a navbar
+            </div>
+            <div className="right-container">
+                <Link to='/'>Home</Link>
+                <Link to='posts'>Posts</Link>
+            </div>
+            
         </div>
     )
 }
