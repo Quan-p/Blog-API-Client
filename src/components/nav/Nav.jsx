@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Nav.scss';
+import './nav.scss';
 
 const Nav = () => {
     return (
         <div className="nav-container">
             <div className="left-container">
-                This is a navbar
+                <Link to='/' className="title">Quan's Blog</Link>
             </div>
             <div className="right-container">
                 <Link to='/'>Home</Link>
