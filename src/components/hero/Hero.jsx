@@ -9,11 +9,11 @@ const Hero = () => {
                 Created as a project for The Odin Project. 
                 Check out my random thoughts and amazing test posts. 
             </h3>
-            <button className="hero-button">
-                <a href={'/posts'}>
-                    Start Reading
-                </a>
-            </button>
+            <a href={'/posts'}>
+                <button className="hero-button">     
+                    Start Reading                      
+                </button>
+            </a>
         </div>
     )
 }
