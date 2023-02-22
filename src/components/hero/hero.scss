@@ -1,0 +1,22 @@
+.hero-container {
+    position: relative;
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 40px;
+
+    .hero-title {
+        margin: 0;
+    }
+
+    .hero-subtitle {
+        text-align: left;
+    }
+
+    .hero-button {
+        height: 30px;
+    }
+}
