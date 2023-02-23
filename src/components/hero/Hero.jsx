@@ -7,6 +7,8 @@ const Hero = () => {
             <h2 className="hero-title">Welcome to my Blog</h2>
             <h3 className="hero-subtitle">
                 Created as a project for The Odin Project. 
+            </h3>
+            <h3 className="hero-subtitle">
                 Check out my random thoughts and amazing test posts. 
             </h3>
             <a href={'/posts'}>
