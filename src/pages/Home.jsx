@@ -31,7 +31,7 @@ const Home = (props) => {
                     <h3>Recent Posts</h3>
                     <ul>
                         {recentPosts.map(post => {
-                            return <PostCard key={post._id} post={post} users={users} />
+                            return <li key={post._id}><PostCard key={post._id} post={post} users={users} /></li>
                         })}
                     </ul>
                     
