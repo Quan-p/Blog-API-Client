@@ -4,8 +4,27 @@
     align-items: center;
     justify-content: center;
     height: 300px;
-
+    border-radius: 15px;
+    background-color: #E9EDC9;
     .author {
         margin: 0;
+    }
+
+    .post-button {
+        border: none;
+        width: fit-content;
+        height:fit-content;
+        border-radius: 15px;
+        background-color: #FAEDCD;
+        font-size: 1rem;
+        color: #D4A373;
+        outline: none;
+        padding: 15px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+    }
+    .post-button:hover {
+        cursor: pointer;
+        background-color: #FEFAE0;
+        transition: background-color 0.25s;
     }
 }

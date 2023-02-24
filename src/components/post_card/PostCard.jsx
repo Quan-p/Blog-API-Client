@@ -17,10 +17,10 @@ function PostCard({ post, users }) {
     
         <div className="card-container">
             <h1 className="author">{author.username}</h1>
-            <h2>{title}</h2>
-            <p>{date}</p>
+            <h2 className="title">{title}</h2>
+            <p className="date">{date}</p>
             <a href={`/posts/${post._id}`} key={post._id}>
-                <button>
+                <button className="post-button">
                     View Post
                 </button>
             </a>

@@ -6,7 +6,8 @@
     justify-content: center;
     flex-direction: column;
     box-sizing: border-box;
-    margin: 40px;
+    padding: 40px;
+    background-color: #E9EDC9;
 
     .hero-title, .hero-subtitle {
         margin: 0;
@@ -30,6 +31,7 @@
         color: #D4A373;
         outline: none;
         margin-top: 15px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
     }
     .hero-button:hover {
         cursor: pointer;
