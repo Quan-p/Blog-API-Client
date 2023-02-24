@@ -1,0 +1,15 @@
+.footer-container {
+    width: 100%;
+    left: 0;
+
+    .footer-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-link p {
+        margin-right: 10px;
+    }
+}
