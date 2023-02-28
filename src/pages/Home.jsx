@@ -26,7 +26,7 @@ const Home = (props) => {
     return (
         <div className="home-container">
             <Hero />
-            <h3>Recent Posts</h3>
+            <h3 className="recent-header">Recent Posts</h3>
             {recentPosts && users ?
                 <div className="post-container">
                     <ul>
