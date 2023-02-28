@@ -45,6 +45,11 @@ const PostDetails = (props) => {
                     </h3>
                     <h3>{date}</h3>
                     <div className="content-container">{postObj.content}</div>
+                    <ul className="comment-list">
+                        {postObj.comments.map(post => {
+                            return <li key={post._id}>{post}</li>
+                        })}
+                    </ul>
                 </div>
             ): <ClimbingBoxLoader
                     color="#36d7b7"
