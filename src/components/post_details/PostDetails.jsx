@@ -37,11 +37,14 @@ const PostDetails = (props) => {
     return (
         <div>
             {postObj && authorUsername ? (
-                <div>
-                    <div>{postObj.title}</div>
-                    <div>{authorUsername}</div>
-                    <div>{postObj.content}</div>
-                    <div>{date}</div>
+                <div className="detail-container">
+                    <h1>{postObj.title}</h1>
+                    <h3>
+                        Posted by 
+                        <span> {authorUsername}</span>
+                    </h3>
+                    <h3>{date}</h3>
+                    <div className="content-container">{postObj.content}</div>
                 </div>
             ): <ClimbingBoxLoader
                     color="#36d7b7"
