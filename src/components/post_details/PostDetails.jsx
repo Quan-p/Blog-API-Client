@@ -1,10 +1,23 @@
 import React from "react";
+import { ClimbingBoxLoader } from "react-spinners";
+import './postDetails.scss';
 
 const PostDetails = (props) => {
     const { posts, users, handleGetAuthorUsername } = props;
 
+    const override = {
+        position: 'static',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
+
     if (!posts || !users || !handleGetAuthorUsername) {
-        return <div>Loading...</div>;
+        return <ClimbingBoxLoader
+                    color="#36d7b7"
+                    size={25}
+                    cssOverride={ override }
+                />;
     }
 
     const postId = window.location.pathname.split("/").pop();
@@ -23,7 +36,6 @@ const PostDetails = (props) => {
 
     return (
         <div>
-            This is the post details page
             {postObj && authorUsername ? (
                 <div>
                     <div>{postObj.title}</div>
@@ -31,7 +43,12 @@ const PostDetails = (props) => {
                     <div>{postObj.content}</div>
                     <div>{date}</div>
                 </div>
-            ): <div>Loading...</div>}
+            ): <ClimbingBoxLoader
+                    color="#36d7b7"
+                    size={25}
+                    cssOverride={ override }
+                />
+            }
         </div>
     )
 }
