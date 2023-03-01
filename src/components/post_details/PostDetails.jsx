@@ -13,14 +13,14 @@ const PostDetails = (props) => {
             try {
                 const commentReq = await fetch(`https://blog-api-ifcw.onrender.com/posts/${postId}/comments`);
                 const commentJson = await commentReq.json();
-                console.log(commentJson[0]);
-                if (Array.isArray(commentJson)) {
-                    console.log(commentJson.length);
-                  } else {
-                    console.log('commentJson is not an array');
-                    console.dir(commentJson);
-                    console.log(commentJson.comments[1].text)
-                }
+                // console.log(commentJson[0]);
+                // if (Array.isArray(commentJson)) {
+                //     console.log(commentJson.length);
+                //   } else {
+                //     console.log('commentJson is not an array');
+                //     console.dir(commentJson);
+                //     // console.log(commentJson.comments[1].text)
+                // }
                 setCommentArray(commentJson.comments);
             } catch(error) {
                 console.error(error)
