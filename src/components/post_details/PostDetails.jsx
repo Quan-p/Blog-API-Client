@@ -73,9 +73,18 @@ const PostDetails = (props) => {
                         {commentArray.length > 0 ? (
                             commentArray.map(comment => {
                                 return <li key={comment._id} className='comment-container'>
+                                    <div className="comment-header">
+                                        <h4 className='comment-content'>
+                                            {comment.user} 
+                                        </h4>
+                                        <span className='comment-content'>
+                                            {new Date(comment.date).toLocaleString()}
+                                        </span>
+                                    </div>
                                     <div className='comment-content'>
                                         {comment.text}
                                     </div>
+                                    
                                 </li>
                             })
                         ) : (
