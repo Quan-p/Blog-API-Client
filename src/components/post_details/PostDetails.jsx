@@ -68,10 +68,15 @@ const PostDetails = (props) => {
                     </h3>
                     <h3>{date}</h3>
                     <div className="content-container">{postObj.content}</div>
+                    <h3>Comments</h3>
                     <ul className="comment-list">
                         {commentArray.length > 0 ? (
                             commentArray.map(comment => {
-                                return <li key={comment._id}>{comment.text}</li>
+                                return <li key={comment._id} className='comment-container'>
+                                    <div className='comment-content'>
+                                        {comment.text}
+                                    </div>
+                                </li>
                             })
                         ) : (
                             <p>No comments yet</p>
