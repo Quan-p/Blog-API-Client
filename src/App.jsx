@@ -36,11 +36,13 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Routes>
-        <Route path='/' element={ <Home posts={posts} users={users}/> } />
-        <Route path='posts' element={ <Post posts={posts} /> } />
-        <Route path='/posts/:postid' element={ <PostDetails posts={posts} users={users} handleGetAuthorUsername={handleGetAuthorUsername} /> } />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path='/' element={ <Home posts={posts} users={users}/> } />
+          <Route path='posts' element={ <Post posts={posts} /> } />
+          <Route path='/posts/:postid' element={ <PostDetails posts={posts} users={users} handleGetAuthorUsername={handleGetAuthorUsername} /> } />
+        </Routes>
+      </main>
       <Footer />
     </div>
   )
