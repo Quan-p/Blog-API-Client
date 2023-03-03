@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ClimbingBoxLoader } from "react-spinners";
+import CommentForm from "../commentForm/CommentForm";
 import './postDetails.scss';
 
 const PostDetails = (props) => {
@@ -13,14 +14,6 @@ const PostDetails = (props) => {
             try {
                 const commentReq = await fetch(`https://blog-api-ifcw.onrender.com/posts/${postId}/comments`);
                 const commentJson = await commentReq.json();
-                // console.log(commentJson[0]);
-                // if (Array.isArray(commentJson)) {
-                //     console.log(commentJson.length);
-                //   } else {
-                //     console.log('commentJson is not an array');
-                //     console.dir(commentJson);
-                //     // console.log(commentJson.comments[1].text)
-                // }
                 setCommentArray(commentJson.comments);
             } catch(error) {
                 console.error(error)
@@ -69,6 +62,7 @@ const PostDetails = (props) => {
                     <h3>{date}</h3>
                     <div className="content-container">{postObj.content}</div>
                     <h3>Comments</h3>
+                    <CommentForm postId={postId}/>
                     <ul className="comment-list">
                         {commentArray.length > 0 ? (
                             commentArray.map(comment => {
