@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-const CommentForm = (postId) => {
+const CommentForm = ({ postId }) => {
     const [user, setUser] = useState('');
     const [text, setText] = useState('');
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -14,7 +15,7 @@ const CommentForm = (postId) => {
                 },
                 body: JSON.stringify({ user, text }),
             });
-            if (res.ok) {
+            if (postCall.status === 200) {
                 console.log('Comment submitted successfully!');
                 setUser('');
                 setText('');
@@ -29,7 +30,7 @@ const CommentForm = (postId) => {
     return (
         <div>
             <h3>Comment Form</h3>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>
                     Username:
                     <input type="text" value={user} onChange={(e) => setUser(e.target.value)} />
