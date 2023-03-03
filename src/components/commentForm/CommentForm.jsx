@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const CommentForm = ({ postId }) => {
+const CommentForm = ({ postId, onCommentSubmit }) => {
     const [user, setUser] = useState('');
     const [text, setText] = useState('');
 
@@ -19,6 +19,10 @@ const CommentForm = ({ postId }) => {
                 console.log('Comment submitted successfully!');
                 setUser('');
                 setText('');
+
+                // update comments list
+                const commentJson = await postCall.json();
+                onCommentSubmit(commentJson);
               } else {
                 throw new Error('Form submission failed!');
               }
