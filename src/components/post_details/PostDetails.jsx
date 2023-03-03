@@ -21,6 +21,11 @@ const PostDetails = (props) => {
         };
         fetchComments();
     }, [postId]);
+
+    const handleCommentSubmit = (newComment) => {
+        setCommentArray(prevComments => [...prevComments, newComment])
+    };
+
     const override = {
         position: 'static',
         display: 'flex',
@@ -62,7 +67,7 @@ const PostDetails = (props) => {
                     <h3>{date}</h3>
                     <div className="content-container">{postObj.content}</div>
                     <h3>Comments</h3>
-                    <CommentForm postId={postId}/>
+                    <CommentForm postId={postId} onCommentSubmit={handleCommentSubmit} />
                     <ul className="comment-list">
                         {commentArray.length > 0 ? (
                             commentArray.map(comment => {
