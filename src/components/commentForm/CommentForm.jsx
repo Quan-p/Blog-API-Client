@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './commentForm.scss';
 
 const CommentForm = ({ postId }) => {
     const [user, setUser] = useState('');
@@ -33,11 +34,11 @@ const CommentForm = ({ postId }) => {
             <form onSubmit={handleSubmit}>
                 <label>
                     Username:
-                    <input type="text" value={user} onChange={(e) => setUser(e.target.value)} />
+                    <input type="text" value={user} placeholder='Enter your name' onChange={(e) => setUser(e.target.value)} />
                 </label>
                     <label>
                         Message:
-                        <textarea value={text} onChange={(e) => setText(e.target.value)} />
+                        <textarea value={text} placeholder='Add a comment...' onChange={(e) => setText(e.target.value)} />
                     </label>
                     <button type="submit">
                         Submit
