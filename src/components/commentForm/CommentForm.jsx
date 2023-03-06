@@ -29,21 +29,19 @@ const CommentForm = ({ postId }) => {
     }
 
     return (
-        <div>
-            <h3>Comment Form</h3>
-            <form onSubmit={handleSubmit}>
+        <div >
+            <form className="comment-form" onSubmit={handleSubmit}>
                 <label>
                     Username:
-                    <input type="text" value={user} placeholder='Enter your name' onChange={(e) => setUser(e.target.value)} />
                 </label>
-                    <label>
-                        Message:
-                        <textarea value={text} placeholder='Add a comment...' onChange={(e) => setText(e.target.value)} />
-                    </label>
-                    <button type="submit">
-                        Submit
-                    </button>
-                    
+                <input className="username-input" type="text" value={user} placeholder='Enter your name' onChange={(e) => setUser(e.target.value)} />
+                <label>
+                    Message:
+                </label>
+                <textarea className="message-input" value={text} placeholder='Add a comment...' onChange={(e) => setText(e.target.value)} />
+                <button className="submit-btn" type="submit">
+                    Submit
+                </button>
             </form>
         </div>
     )
