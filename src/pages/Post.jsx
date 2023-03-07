@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ClimbingBoxLoader } from "react-spinners";
+import './post.scss';
 
 const Post = (props) => {
     const posts = props.posts;
@@ -20,10 +21,10 @@ const Post = (props) => {
     }, [posts]);
 
     return (
-        <div>
-            This is the Post page
+        <div className="posts-container">
+            <h2>All Posts</h2>
             {sortedPosts ?
-                <ul>
+                <ul className="post-list">
                 {sortedPosts.map(post => {
                     return <li key={post._id}>{post.title}</li>
                 })}
