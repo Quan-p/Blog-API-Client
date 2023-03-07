@@ -83,7 +83,7 @@ const PostDetails = (props) => {
                                 </li>
                             })
                         ) : (
-                            <p>No comments yet</p>
+                            <p className="empty-comment">No comments yet</p>
                         )}
                     </ul>
                 </div>
