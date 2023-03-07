@@ -26,7 +26,9 @@ const Post = (props) => {
             {sortedPosts ?
                 <ul className="post-list">
                 {sortedPosts.map(post => {
-                    return <li key={post._id}>{post.title}</li>
+                    return <a href={`/posts/${post._id}`} key={post._id}>
+                                <li key={post._id}>{post.title}</li>
+                            </a>
                 })}
                 </ul>
                 : <ClimbingBoxLoader
