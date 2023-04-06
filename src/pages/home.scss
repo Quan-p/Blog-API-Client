@@ -1,26 +1,28 @@
 .post-container {
-    justify-content: space-between;
-    align-items: stretch;
+	justify-content: space-between;
+	align-items: stretch;
+	position: relative;
+	width: 100%;
 
-    ul {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-        padding-inline-start: 0;
-        list-style-type: none;
-        li {
-            text-align: center;
-            align-items: center;
-            margin: 15px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            border-radius: 15px;
-            width: 20%;
-        }
-    }
-    
+	ul {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		padding-inline-start: 0;
+		list-style-type: none;
+
+		li {
+			text-align: center;
+			align-items: center;
+			margin: 15px;
+			box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+			border-radius: 15px;
+			width: 20%;
+		}
+	}
 }
 
 .recent-header {
-    padding: 20px 0px 10px 40px;
-    font-size: 2rem;
+	padding: 20px 0px 10px 40px;
+	font-size: 2rem;
 }
