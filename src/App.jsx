@@ -59,7 +59,10 @@ function App() {
 						path='/'
 						element={<Home posts={posts} users={users} />}
 					/>
-					<Route path='posts' element={<Post posts={posts} />} />
+					<Route
+						path='posts'
+						element={<Post posts={publishedPosts} />}
+					/>
 					<Route
 						path='/posts/:postid'
 						element={
