@@ -1,32 +1,36 @@
 .posts-container {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-    h2 {
-        text-align: center;
-    }
+	h2 {
+		text-align: center;
+	}
 
-    .post-list {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        justify-content: center;
-        align-items: center;
-        padding-left: 0;
+	.post-list {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		justify-content: center;
+		align-items: center;
+		padding-left: 0;
 
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-            border-radius: 15px;
-            margin: 15px 0;
-            width: 80%;
-            height: 35px;
-        }
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+			border-radius: 15px;
+			margin: 15px 0;
+			width: 80%;
+			min-height: 40px;
 
-        a:hover {
-            box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
-        }
-    }
+			li {
+				padding: 5px;
+			}
+		}
+
+		a:hover {
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
+		}
+	}
 }
