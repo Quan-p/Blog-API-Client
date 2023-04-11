@@ -64,7 +64,7 @@ const PostDetails = (props) => {
 					<h3>Comments</h3>
 					<CommentForm postId={postId} />
 					<ul className='comment-list'>
-						{commentArray.length > 0 ? (
+						{commentArray && commentArray.length > 0 ? (
 							commentArray.map((comment) => {
 								return (
 									<li
