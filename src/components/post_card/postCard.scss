@@ -6,12 +6,17 @@
 	height: 300px;
 	border-radius: 15px;
 	background-color: #e9edc9;
+	overflow: hidden;
+
 	.author {
 		margin: 0;
 	}
 
 	.title {
 		font-size: 2rem;
+		width: inherit;
+		padding-left: 5px;
+		padding-right: 5px;
 	}
 
 	.author {
@@ -34,5 +39,11 @@
 		cursor: pointer;
 		background-color: #fefae0;
 		transition: background-color 0.25s;
+	}
+
+	@media screen and (max-width: 768px) {
+		.title {
+			font-size: 1rem;
+		}
 	}
 }
