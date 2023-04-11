@@ -60,7 +60,7 @@ function App() {
 						element={<Home posts={publishedPosts} users={users} />}
 					/>
 					<Route
-						path='posts'
+						path='/posts'
 						element={<Post posts={publishedPosts} />}
 					/>
 					<Route
