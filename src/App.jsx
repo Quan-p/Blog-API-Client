@@ -57,7 +57,7 @@ function App() {
 				<Routes>
 					<Route
 						path='/'
-						element={<Home posts={posts} users={users} />}
+						element={<Home posts={publishedPosts} users={users} />}
 					/>
 					<Route
 						path='posts'
