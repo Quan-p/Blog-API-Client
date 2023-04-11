@@ -16,8 +16,8 @@ function PostCard({ post, users }) {
 
 	return (
 		<div className='card-container'>
-			<h1 className='author'>{author.username}</h1>
 			<h2 className='title'>{title}</h2>
+			<h3 className='author'>{author.username}</h3>
 			<p className='date'>{date}</p>
 			<Link to={`/posts/${post._id}`} key={post._id}>
 				<button className='post-button'>View Post</button>
