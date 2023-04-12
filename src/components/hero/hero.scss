@@ -1,43 +1,44 @@
 .hero-container {
-    position: relative;
-    height: 50%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 40px;
-    background-color: #E9EDC9;
+	position: relative;
+	height: 400px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding: 40px;
+	background-color: #e9edc9;
 
-    .hero-title, .hero-subtitle {
-        margin: 0;
-    }
+	.hero-title,
+	.hero-subtitle {
+		margin: 0;
+	}
 
-    .hero-title {
-        padding-bottom: 20px;
-        font-size: 3rem;
-    }
-    .hero-subtitle {
-        padding: 20px 0px;
-        text-align: left;
-        font-size: 2rem;
-    }
+	.hero-title {
+		padding-bottom: 20px;
+		font-size: 3rem;
+	}
+	.hero-subtitle {
+		padding: 20px 0px;
+		text-align: left;
+		font-size: 2rem;
+	}
 
-    .hero-button {
-        height: 75px;
-        width: 250px;
-        border: none;
-        border-radius: 15px;
-        background-color: #FAEDCD;
-        font-size: 1.5rem;
-        color: #D4A373;
-        outline: none;
-        margin-top: 15px;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
-    }
-    .hero-button:hover {
-        cursor: pointer;
-        background-color: #FEFAE0;
-        transition: background-color 0.25s;
-    }
+	.hero-button {
+		height: 75px;
+		width: 250px;
+		border: none;
+		border-radius: 15px;
+		background-color: #faedcd;
+		font-size: 1.5rem;
+		color: #d4a373;
+		outline: none;
+		margin-top: 15px;
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+	}
+	.hero-button:hover {
+		cursor: pointer;
+		background-color: #fefae0;
+		transition: background-color 0.25s;
+	}
 }
