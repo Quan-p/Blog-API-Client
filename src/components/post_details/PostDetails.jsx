@@ -22,7 +22,7 @@ const PostDetails = (props) => {
 			}
 		};
 		fetchComments();
-	}, [postId]);
+	}, [postId, commentArray]);
 
 	const override = {
 		position: 'static',
