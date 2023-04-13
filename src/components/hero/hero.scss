@@ -1,3 +1,5 @@
+@import '../../variables/colors';
+
 .hero-container {
 	position: relative;
 	height: 450px;
@@ -7,7 +9,8 @@
 	flex-direction: column;
 	box-sizing: border-box;
 	padding: 40px;
-	background-color: #e9edc9;
+	background-color: $dark-blue;
+	color: $off-white;
 
 	.hero-title,
 	.hero-subtitle {
@@ -29,16 +32,18 @@
 		width: 250px;
 		border: none;
 		border-radius: 15px;
-		background-color: #faedcd;
+		background-color: $off-white;
 		font-size: 1.5rem;
-		color: #d4a373;
+		font-weight: bold;
+		color: $dark-blue;
 		outline: none;
 		margin-top: 15px;
 		box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+		transition: transform 0.2s ease-in-out;
 	}
 	.hero-button:hover {
 		cursor: pointer;
-		background-color: #fefae0;
-		transition: background-color 0.25s;
+		background-color: $light-blue;
+		transform: scale(1.05);
 	}
 }
