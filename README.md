@@ -23,11 +23,11 @@ Creating a blog from the ground up was an opportunity to further develop REST AP
 
 ### Navigating the Blog
 
-![main](https://github.com/Quan-p/Members-Only/blob/main/public/gifs/Client01.gif)
+![main](https://github.com/Quan-p/Blog-API-Client/blob/main/public/gifs/Client01.gif)
 
 ### Writing a Comment
 
-![main](https://github.com/Quan-p/Members-Only/blob/main/public/gifs/Client02.gif)
+![main](https://github.com/Quan-p/Blog-API-Client/blob/main/public/gifs/Client02.gif)
 
 ## Built With
 
