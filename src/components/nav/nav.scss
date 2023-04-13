@@ -1,33 +1,34 @@
+@import '../../variables/colors';
+
 .nav-container {
-    width: 100%;
-    min-width: 100vw;
-    height: 70px;
-    background-color: #FAEDCD;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 1.5rem;
-    box-sizing: border-box;
+	width: 100%;
+	min-width: 100vw;
+	height: 70px;
+	background-color: $white;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	font-size: 1.8rem;
+	box-sizing: border-box;
+	color: $dull-blue;
 
-    a {
-        font-weight: 500;
-        text-decoration: inherit;
-    }
-    a:hover {
-        color: #D4A373;
-        transition: color 0.1s ease-in-out;
-    }
+	a {
+		font-weight: 500;
+	}
+	a:hover {
+		color: $dark-blue;
+		transition: color 0.2s ease-in-out;
+	}
 
-    .left-container {
-        margin-right: auto;
-        padding-left: 30px;
-    }
+	.left-container {
+		margin-right: auto;
+		padding-left: 30px;
+	}
 
-    .right-container {
-        padding-right: 30px;
-        a {
-            padding-left: 30px;
-        }
-
-    }
+	.right-container {
+		padding-right: 30px;
+		a {
+			padding-left: 30px;
+		}
+	}
 }
