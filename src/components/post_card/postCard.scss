@@ -1,3 +1,5 @@
+@import '../../variables/colors';
+
 .card-container {
 	display: flex;
 	flex-direction: column;
@@ -5,7 +7,8 @@
 	justify-content: center;
 	height: 350px;
 	border-radius: 15px;
-	background-color: #e9edc9;
+	background-color: $dark-blue;
+	color: $off-white;
 	overflow: hidden;
 
 	.author {
@@ -28,16 +31,17 @@
 		width: fit-content;
 		height: fit-content;
 		border-radius: 15px;
-		background-color: #faedcd;
+		background-color: $off-white;
 		font-size: 1rem;
-		color: #d4a373;
+		color: $dull-blue;
 		outline: none;
 		padding: 15px;
 		box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
 	}
 	.post-button:hover {
 		cursor: pointer;
-		background-color: #fefae0;
+		background-color: $light-blue;
+		color: $dark-blue;
 		transition: background-color 0.25s;
 	}
 
