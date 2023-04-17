@@ -1,6 +1,6 @@
 # Blog Frontend
 
-This repo is specifically for the client side of the Blog-API. The rest of the project consists of REST API only backend as well as a frontend CMS. Separate websites for the API and blog CMS were created and are linked below.
+This repo is specifically for the client side of the Blog-API project. The rest of the project consists of a REST API only backend as well as a frontend CMS. A separate website for the blog CMS was created and is linked below along with the repo for the API.
 
 ## Live Demo
 
@@ -43,4 +43,4 @@ Creating a blog from the ground up was an opportunity to further develop REST AP
 -   PassportJS used for local & JWT authentication
 -   Create, edit and delete blog posts/comments as an admin using the CMS
 -   Toggle blog posts as "Published" and "Unpublished" as needed
--   Comment on any blog posts
+-   Comment on any blog post
