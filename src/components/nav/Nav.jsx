@@ -7,7 +7,7 @@ const Nav = () => {
 		<div className='nav-container'>
 			<div className='left-container'>
 				<Link to='/' className='title'>
-					Blogify
+					Odin Blog
 				</Link>
 			</div>
 			<div className='right-container'>
