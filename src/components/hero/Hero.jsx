@@ -5,7 +5,7 @@ import './hero.scss';
 const Hero = () => {
 	return (
 		<div className='hero-container'>
-			<h2 className='hero-title'>Welcome to my Blog</h2>
+			<h2 className='hero-title'>Welcome to Blogify</h2>
 			<h3 className='hero-subtitle'>
 				Created as a project for The Odin Project.
 			</h3>
